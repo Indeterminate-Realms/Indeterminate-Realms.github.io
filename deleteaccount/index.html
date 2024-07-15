@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Delete Account Page</title>
+  <meta name="generator" content="GrapesJS Studio">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta property="og:type" content="website">
+  <meta name="robots" content="index,follow">
+  <link rel="stylesheet" href="../css/deleteaccountstyle.css">
+  <style>
+    /* Popup container - can be anything you want */
+    .popup {
+      display: none;
+      position: fixed;
+      z-index: 9;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    /* Popup content */
+    .popup-content {
+      background-color: #fefefe;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 300px;
+      text-align: center;
+    }
+
+    /* Buttons */
+    .popup-button {
+      margin: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body id="i69iy">
+  <form method="get" id="iigtw">
+    <div id="inn0t">
+      <label id="in31r">Email</label>
+      <input type="email" id="emailInput" name="" />
+    </div>
+    <div id="iuy3v">
+      <label id="igitc">Password</label>
+      <input type="password" id="passwordInput" />
+    </div>
+    <div id="itxxf">
+      <button type="button" id="deleteAccountButton">DELETE MY ACCOUNT AND ALL PURCHASES</button>
+    </div>
+  </form>
+
+  <!-- The Popup -->
+  <div id="deletePopup" class="popup">
+    <div class="popup-content">
+      <p>Are you sure you want to delete your account and all of your purchases and saved games?</p>
+      <button id="confirmDeleteButton" class="popup-button">Confirm</button>
+      <button id="cancelDeleteButton" class="popup-button">Cancel</button>
+    </div>
+  </div>
+
+  <script type="module">
+
+    // Your web app's Firebase configuration
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-app.js";
+    import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyB5hxmrIq596OSVQyOrRhWYkI8fMI7b818",
+      authDomain: "chooseyouraiadventure.firebaseapp.com",
+      projectId: "chooseyouraiadventure",
+      storageBucket: "chooseyouraiadventure.appspot.com",
+      messagingSenderId: "82898428124",
+      appId: "1:82898428124:web:0a337e6c836a41002ed419"
+    };
+
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+
+    document.getElementById('deleteAccountButton').onclick = function () {
+      document.getElementById('deletePopup').style.display = 'block';
+    }
+
+    document.getElementById('cancelDeleteButton').onclick = function () {
+      document.getElementById('deletePopup').style.display = 'none';
+    }
+
+    document.getElementById('confirmDeleteButton').onclick = async function () {
+      // Add the logic to handle account deletion here
+      const email = document.getElementById('emailInput').value;
+      const password = document.getElementById('passwordInput').value;
+
+      try {
+        // Sign in the user
+        console.log("email", email);
+        console.log('password :>> ', password);
+
+        console.log('signInWithEmailAndPassword :>> ', signInWithEmailAndPassword);
+        const userCredential = await signInWithEmailAndPassword(auth, email, password);
+        console.log('userCredential :>> ', userCredential);
+
+        const idToken = await userCredential.user.getIdToken();
+        console.log('idToken :>> ', idToken);
+
+        // Send request to server to delete account
+        const response = await fetch('https://hammerhead-app-qj2wk.ondigitalocean.app/users/delete', {
+          method: 'DELETE',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${idToken}`
+          }
+        });
+
+        const result = await response.json();
+
+        if (response.ok) {
+          alert('Account deleted successfully');
+        } else {
+          alert(`Error: ${result.error}`);
+        }
+
+        document.getElementById('deletePopup').style.display = 'none';
+      } catch (error) {
+        console.error(error);
+        alert(`Authentication failed: ${error.message}`);
+        document.getElementById('deletePopup').style.display = 'none';
+      }
+    }
+  </script>
+</body>
+
+</html>
