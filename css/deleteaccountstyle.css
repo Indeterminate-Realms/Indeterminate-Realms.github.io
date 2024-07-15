@@ -1,1 +1,74 @@
-* { box-sizing: border-box; } body {margin: 0;}*{box-sizing:border-box;}body{margin:0;}.myContainer{background-color:rgba(2, 2, 2, 1);padding-bottom:4%;}.myLastContainer{display:block;justify-content:center;align-items:flex-start;padding-top:3%;padding-right:3%;padding-bottom:3%;padding-left:3%;}.myRow{display:flex;justify-content:center;align-items:flex-start;}#ijpoa{height:4em;width:10em;}#itxxf{display:block;padding-top:1%;padding-right:0%;padding-bottom:1%;padding-left:5%;}#iuy3v{display:block;padding-top:1%;padding-right:0%;padding-bottom:1%;padding-left:5%;}#inn0t{display:block;padding-top:1%;padding-right:0%;padding-bottom:1%;padding-left:5%;}#igitc{padding-right:1%;}#in31r{padding-right:1%;}@media (max-width: 768px){#itxxf{padding-top:10%;}}@media (max-width: 480px){#itxxf{padding-top:20%;padding-left:25%;}#ijpoa{background-color:rgba(255,54,54,1);font-family:Arial,Helvetica,sans-serif;height:5em;}#inn0t{padding-bottom:2%;padding-top:5%;padding-left:10%;}#iuy3v{padding-top:2%;padding-bottom:2%;padding-left:10%;}}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.myContainer {
+    background-color: rgba(2, 2, 2, 1);
+    padding-bottom: 4%;
+}
+
+.myLastContainer {
+    display: block;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 3%;
+    padding-right: 3%;
+    padding-bottom: 3%;
+    padding-left: 3%;
+}
+
+.myRow {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#ijpoa {
+    height: 4em;
+    width: 10em;
+}
+
+#itxxf {
+    display: block;
+    padding-top: 1%;
+    padding-right: 0%;
+    padding-bottom: 1%;
+    padding-left: 5%;
+}
+
+#iuy3v {
+    display: block;
+    padding-top: 1%;
+    padding-right: 0%;
+    padding-bottom: 1%;
+    padding-left: 5%;
+}
+
+#inn0t {
+    display: block;
+    padding-top: 1%;
+    padding-right: 0%;
+    padding-bottom: 1%;
+    padding-left: 5%;
+}
+
+#igitc {
+    padding-right: 1%;
+}
+
+#in31r {
+    padding-right: 1%;
+}
+
