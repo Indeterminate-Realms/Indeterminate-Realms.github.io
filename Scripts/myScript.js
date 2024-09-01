@@ -14,7 +14,7 @@ function redirectTo(url) {
   
     if (IASBtn) {
         IASBtn.addEventListener('click', function() {
-        redirectTo('https://play.google.com'); // TODO: update to store page
+        redirectTo('https://play.google.com/store/apps/details?id=com.ArcticSkyGames.ChooseYourAIAdventure'); // TODO: update to store page
       });
     }
     if (PolarisOutpostBtn) {
