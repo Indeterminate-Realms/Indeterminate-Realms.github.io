@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Page 2</title>
+  <meta name="generator" content="GrapesJS Studio">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta property="og:type" content="website">
+  <meta name="robots" content="index,follow">
+  <link rel="stylesheet" href="./css/style.css">
+
+  <script>
+    function isMobile() {
+      return /Mobi|Android/i.test(navigator.userAgent);
+    }
+
+    function isSmallScreen() {
+      return window.matchMedia("(max-width: 1090px)").matches;
+    }
+
+    console.log("in script");
+    var testing = false;
+    if ((!isMobile() || !isSmallScreen()) && !testing) {
+      console.log("in condition");
+      window.location.href = "https://play.google.com/store/apps/details?id=com.ArcticSkyGames.ChooseYourAIAdventure";
+    }
+  </script>
+
+  <!-- Reddit Pixel -->
+  <script>
+    !function (w, d) { if (!w.rdt) { var p = w.rdt = function () { p.sendEvent ? p.sendEvent.apply(p, arguments) : p.callQueue.push(arguments) }; p.callQueue = []; var t = d.createElement("script"); t.src = "https://www.redditstatic.com/ads/pixel.js", t.async = !0; var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(t, s) } }(window, document); rdt('init', 'a2_fmlcjcdk2utw'); rdt('track', 'PageVisit');
+  </script>
+  <!-- DO NOT MODIFY UNLESS TO REPLACE A USER IDENTIFIER -->
+  <!-- End Reddit Pixel -->
+
+</head>
+
+<body id="icu02t"><img id="iwcn" src="./assets/promotional_1.png" />
+  <section id="i5zql" class="gjs-section">
+    <div class="gjs-container"></div>
+  </section>
+  <div id="ijojw">
+    <p dir="ltr" id="docs-internal-guid-213950e1-7fff-5a6f-e041-4d526f4d85a7"> • <span id="it27w">Open beta with free
+        premium token and images!</span></p>
+    <p dir="ltr" id="i0pgn"> • <span id="iuxaz">No payment info required!</span></p>
+    <p dir="ltr" id="i4ghm"> • <span id="ir0cf-2">4 player turn-based co-op multiplayer</span></p>
+    <p dir="ltr" id="itkbm"> • <span id="i4h3z">Impactful RPG elements like character stats,<br />     attributes and
+        consequences</span></p>
+    <p dir="ltr" id="it4qw"> •<span id="iszqy"> 10 unique game modes ranging from Romance<br />     to Survival to
+        Mystery.</span><br /></p>
+  </div>
+  <section class="gjs-section" id="ivc4y">
+    <div class="gjs-container"><button type="button" class="install-btn" id="ipp0w">Install On Google Play
+        Store</button></div>
+  </section>
+  <div id="infr" class="gjs-grid-row">
+    <div class="gjs-grid-column" id="i772r"><img id="i9av" src="./assets/s1.jpg" /></div>
+    <div id="ir8g" class="gjs-grid-column"><img id="ibjz3" src="./assets/s3.png" /></div>
+  </div>
+  <div id="izh7x" class="gjs-grid-row">
+    <div class="gjs-grid-column" id="iworf"><img id="ic4sa" src="./assets/s2.jpg" /></div>
+    <div id="i3rry" class="gjs-grid-column"><img id="inpm4" src="./assets/screenshot_9.jpg" /></div>
+  </div>
+
+
+  <!-- JavaScript to track button click and redirect -->
+  <script>
+    // Add event listener for the button
+    document.getElementById('ipp0w').addEventListener('click', function () {
+      // Send click event to Reddit Pixel
+      rdt('track', 'Purchase');
+
+      // Redirect to Google Play Store after tracking the event
+      setTimeout(function() {
+        window.location.href = "https://play.google.com/store/apps/details?id=com.ArcticSkyGames.ChooseYourAIAdventure";  
+      }, 300); 
+    });
+  </script>
+
+</body>
+
+
+
+
+</html>
