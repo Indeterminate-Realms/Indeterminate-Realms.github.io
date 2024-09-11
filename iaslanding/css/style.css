@@ -447,6 +447,10 @@ body {
 
 #inr58 {
     padding: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    padding-left: 10px;
 }
 
 #iqx17 {
@@ -511,14 +515,11 @@ body {
 
 #iw2lg {
     font-size: 2rem;
-    font-family: Arial, sans-serif;
     color: rgba(255, 255, 255, 1);
-    font-weight: 400;
-    font-style: normal;
-    font-variant: normal;
-    text-decoration: none;
-    vertical-align: baseline;
-    white-space: pre-wrap;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
 }
 
 #is2eb {
@@ -543,6 +544,14 @@ body {
     display: flex;
     justify-content: center;
     background-color: rgba(6, 8, 26, 1);
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    padding-top: 5px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
 }
 
 #ivqvl {
@@ -596,6 +605,37 @@ body {
     margin-top: 28px;
     align-items: center;
     align-self: center;
+}
+
+.gjs-link {
+    vertical-align: top;
+    max-width: 100%;
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+
+#iv8dt {
+    color: rgb(0, 34, 255);
+    padding: 10px;
+}
+
+#ib6ei {
+    color: rgb(0, 34, 255);
+    padding: 10px;
+}
+
+#i41uf {
+    background-color: rgba(6, 8, 26, 1);
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+}
+
+#iyu42 {
+    margin-top: 36px;
+    
 }
 
 @media (max-width: 992px) {
@@ -767,12 +807,7 @@ body {
     }
 
     #iw2lg {
-        font-family: Arial Black, Gadget, sans-serif;
         font-size: 0.8em;
-        background-color: rgba(255, 255, 255, 0);
-        color: rgba(226, 226, 226, 1);
-        white-space: normal;
-        width: 90%;
         padding-top: 0px;
         padding-bottom: 0px;
     }
@@ -993,5 +1028,22 @@ body {
         padding-left: 0px;
         flex-direction: row;
         background-color: rgba(3, 5, 28, 1);
+    }
+
+    #i41uf {
+        background-color: rgba(6, 8, 28, 1);
+        padding-top: 0px;
+        padding-right: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+    }
+
+    #iv8dt {
+        color: #0735ff;
+    }
+
+    #ib6ei {
+        display: block;
+        color: #0735ff;
     }
 }
