@@ -71,21 +71,40 @@
 
   <!-- JavaScript to track button click and redirect -->
   <script>
+    
+    var timeoutReached = false;
+    var mouseMoved = false; 
+
+    console.log("updated bot checks");
+    setTimeout(function() {
+        timeoutReached = true;
+        // console.log("timeout reached");
+        
+    }, 501); 
+
+    document.addEventListener('mousemove', function() {
+       mouseMoved = true;
+      //  console.log("mouse moved");
+    });
+
     // Add event listener for the button
     document.getElementById('iaguk').addEventListener('click', function () {
-      // Send click event to Reddit Pixel
-      rdt('track', 'View Content');
+      if (timeoutReached && mouseMoved) {
+        // Send click event to Reddit Pixel
+        rdt('track', 'View Content');
 
-      // Redirect to Google Play Store after tracking the event
-      setTimeout(function() {
-        window.location.href = "https://play.google.com/store/apps/details?id=com.ArcticSkyGames.ChooseYourAIAdventure";  
-      }, 300); 
+        // Redirect to Google Play Store after tracking the event
+        setTimeout(function() {
+          window.location.href = "https://play.google.com/store/apps/details?id=com.ArcticSkyGames.ChooseYourAIAdventure";  
+        }, 300); 
+      }
+      else{
+        console.log("please move mouse first");
+      }
     });
+
   </script>
 
 </body>
-
-
-
 
 </html>
