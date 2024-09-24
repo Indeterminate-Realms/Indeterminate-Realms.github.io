@@ -124,7 +124,7 @@
 
     // Add event listener for the button
     document.getElementById('iaguk').addEventListener('click', function () {
-      if (timeoutReached && mouseMoved) {
+      if (timeoutReached) { // not filtering by mouse moved because of mobile
         // Send click event to Reddit Pixel
         rdt('track', 'View Content');
 
